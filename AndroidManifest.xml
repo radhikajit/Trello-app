@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.project"
+    android:versionCode="1"
+    android:versionName="1.0">
+    <uses-sdk android:targetSdkVersion="28" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_baseline_playlist_add_check_24"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_baseline_playlist_add_check_24"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Project">
+        <activity android:name=".LoginActivity"
+            android:label="TRELLO">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Register"
+            android:label="Register">
+        </activity>
+            <activity android:name=".otpgen"
+                android:label="OTP">
+            </activity>
+        <activity
+            android:name=".Homemaker"
+            android:label="TRELLO">
+        </activity>
+        <activity android:name=".General_list"
+            android:label="Components">
+        </activity>
+        <activity android:name=".Todo"
+            android:label="Todo List">
+        </activity>
+        <receiver android:name=".AlertReceiver" />
+        <activity android:name=".DashBoardActivity"
+            android:label="Meetings">
+        </activity>
+        <activity android:name=".EditActivity"
+            android:label="Edit"/>
+        <activity android:name=".Ringing"
+            android:label="Alarm"/>
+        <receiver
+            android:name=".TaskReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote" />
+        <receiver android:name=".BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name=".AddModifyTask"
+            android:label="Add Task"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="Task Manager">
+        </activity>
+        <activity android:name=".Teacher"
+            android:label="TRELLO">
+        </activity>
+        <activity android:name=".Business"
+            android:label="TRELLO">
+        </activity>
+    </application>
+</manifest>
